@@ -44,7 +44,6 @@ function Navigation() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            {/* if no user */}
             {!user && (
               <LinkContainer to="/login">
                 <Nav.Link>Login</Nav.Link>
