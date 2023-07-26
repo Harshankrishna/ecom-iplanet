@@ -55,26 +55,17 @@ function Footer() {
             <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Products</h6>
               <p>
-                <a
-                  href="https://hk-ecom-iplanet.netlify.app/category/iwatch"
-                  className="text-reset"
-                >
+                <a href="/category/iwatch" className="text-reset">
                   iWatch
                 </a>
               </p>
               <p>
-                <a
-                  href="https://hk-ecom-iplanet.netlify.app/category/iphones"
-                  className="text-reset"
-                >
+                <a href="/category/iphones" className="text-reset">
                   iPhones
                 </a>
               </p>
               <p>
-                <a
-                  href="https://hk-ecom-iplanet.netlify.app/category/imac"
-                  className="text-reset"
-                >
+                <a href="/category/imac" className="text-reset">
                   iMac
                 </a>
               </p>
@@ -83,26 +74,17 @@ function Footer() {
             <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
               <p>
-                <a
-                  href="https://hk-ecom-iplanet.netlify.app/cart"
-                  className="text-reset"
-                >
+                <a href="/cart" className="text-reset">
                   Cart
                 </a>
               </p>
               <p>
-                <a
-                  href="https://hk-ecom-iplanet.netlify.app/orders"
-                  className="text-reset"
-                >
+                <a href="/orders" className="text-reset">
                   Orders
                 </a>
               </p>
               <p>
-                <a
-                  href="https://hk-ecom-iplanet.netlify.app/category/all"
-                  className="text-reset"
-                >
+                <a href="/category/all" className="text-reset">
                   Category
                 </a>
               </p>
