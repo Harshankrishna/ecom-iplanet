@@ -20,7 +20,7 @@ function Home() {
   }, []);
   return (
     <div>
-      <img src={img1} className="home-banner mt-4" alt="" />
+      <img src={img1} className="home-banner" alt="" />
       <div className="featured-products-container container mt-4">
         <h2>Latest products</h2>
         <div className="d-flex justify-content-center flex-wrap">
