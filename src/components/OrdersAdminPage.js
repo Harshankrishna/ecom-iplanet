@@ -121,7 +121,7 @@ function OrdersAdminPage() {
             <p>
               <span>{order.count} x </span> {order.name}
             </p>
-            <p>Price: ${Number(order.price) * order.count}</p>
+            <p>Price: ₹{Number(order.price) * order.count}</p>
           </div>
         ))}
         <Modal.Footer>

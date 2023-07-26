@@ -57,7 +57,7 @@ function OrdersPage() {
               </td>
               <td>{order.date}</td>
 
-              <td>${order.total}</td>
+              <td>₹{order.total}</td>
             </tr>
           ))}
         </tbody>
