@@ -10,6 +10,7 @@ import { updateProducts } from "../features/productSlice";
 import ProductPreview from "../components/ProductPreview";
 import img1 from "../assets/iPhone-2.jpg";
 import img2 from "../assets/watch.jpg";
+import Footer from "./Footer";
 
 function Home() {
   const dispatch = useDispatch();
@@ -66,6 +67,7 @@ function Home() {
           ))}
         </Row>
       </div>
+      <Footer />
     </div>
   );
 }
