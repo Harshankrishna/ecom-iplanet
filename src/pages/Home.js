@@ -21,7 +21,13 @@ function Home() {
   }, []);
   return (
     <div>
-      <img src={img1} className="home-banner" alt="" />
+      <img
+        src={img1}
+        className="home-banner"
+        alt=""
+        width={"100%"}
+        height={"100%"}
+      />
       <div className="featured-products-container container mt-4">
         <h2>Latest products</h2>
         <div className="d-flex justify-content-center flex-wrap">
@@ -43,7 +49,13 @@ function Home() {
         </div>
       </div>
       <div className="sale__banner--container mt-4">
-        <img src={img2} alt="watch" />
+        <img
+          src={img2}
+          className="banner"
+          alt="watch"
+          width={"100%"}
+          height={"100%"}
+        />
       </div>
       <div className="recent-products-container container mt-4">
         <h2>Categories</h2>
