@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { logout, resetNotifications } from "../features/userSlice";
 import "./Navigation.css";
+import logo from "../assets/Apple-logo.png";
 
 function Navigation() {
   const user = useSelector((state) => state.user);
@@ -35,7 +36,10 @@ function Navigation() {
     <Navbar bg="light" expand="lg">
       <Container>
         <LinkContainer to="/">
-          <Navbar.Brand>iPlanet</Navbar.Brand>
+          <Navbar.Brand>
+            <img src={logo} alt="" width={"30px"} height={"30px"} />
+            iPlanet
+          </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
