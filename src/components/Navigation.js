@@ -35,11 +35,9 @@ function Navigation() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
+        <img src={logo} alt="" width={"30px"} height={"30px"} />
         <LinkContainer to="/">
-          <Navbar.Brand>
-            <img src={logo} alt="" width={"30px"} height={"30px"} />
-            iPlanet
-          </Navbar.Brand>
+          <Navbar.Brand>iPlanet</Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
