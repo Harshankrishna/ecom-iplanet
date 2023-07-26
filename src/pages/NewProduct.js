@@ -116,7 +116,6 @@ function NewProduct() {
                 <option disabled selected>
                   -- Select One --
                 </option>
-                {/* <option value="technology">technology</option> */}
                 <option value="iwatch">iWatch</option>
                 <option value="iphones">iPhones</option>
                 <option value="imac">iMac</option>
