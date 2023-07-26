@@ -19,6 +19,7 @@ import { io } from "socket.io-client";
 import { addNotification } from "./features/userSlice";
 
 function App() {
+<<<<<<< HEAD
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -29,6 +30,18 @@ function App() {
         dispatch(addNotification(msgObj));
       }
     });
+=======
+    const user = useSelector((state) => state.user);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        const socket = io("ws://https://frantic-train-lion.cyclic.app");
+        socket.off("notification").on("notification", (msgObj, user_id) => {
+            // logic for notification
+            if (user_id === user._id) {
+                dispatch(addNotification(msgObj));
+            }
+        });
+>>>>>>> 68d7178a55ee8982b25336b6f4dae0fb3b6aff27
 
     socket.off("new-order").on("new-order", (msgObj) => {
       if (user.isAdmin) {
