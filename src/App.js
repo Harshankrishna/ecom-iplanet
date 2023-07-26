@@ -19,59 +19,59 @@ import { io } from "socket.io-client";
 import { addNotification } from "./features/userSlice";
 
 function App() {
-    const user = useSelector((state) => state.user);
-    const dispatch = useDispatch();
-    useEffect(() => {
-        const socket = io("ws://localhost:8080");
-        socket.off("notification").on("notification", (msgObj, user_id) => {
-            // logic for notification
-            if (user_id === user._id) {
-                dispatch(addNotification(msgObj));
-            }
-        });
+  const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const socket = io("ws://https://frantic-train-lion.cyclic.app");
+    socket.off("notification").on("notification", (msgObj, user_id) => {
+      // logic for notification
+      if (user_id === user._id) {
+        dispatch(addNotification(msgObj));
+      }
+    });
 
-        socket.off("new-order").on("new-order", (msgObj) => {
-            if (user.isAdmin) {
-                dispatch(addNotification(msgObj));
-            }
-        });
-    }, []);
-    return (
-        <div className="App">
-            <BrowserRouter>
-                <ScrollToTop />
-                <Navigation />
-                <Routes>
-                    <Route index element={<Home />} />
-                    {!user && (
-                        <>
-                            <Route path="/login" element={<Login />} />
-                            <Route path="/signup" element={<Signup />} />
-                        </>
-                    )}
+    socket.off("new-order").on("new-order", (msgObj) => {
+      if (user.isAdmin) {
+        dispatch(addNotification(msgObj));
+      }
+    });
+  }, []);
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <ScrollToTop />
+        <Navigation />
+        <Routes>
+          <Route index element={<Home />} />
+          {!user && (
+            <>
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+            </>
+          )}
 
-                    {user && (
-                        <>
-                            <Route path="/cart" element={<CartPage />} />
-                            <Route path="/orders" element={<OrdersPage />} />
-                        </>
-                    )}
-                    {user && user.isAdmin && (
-                        <>
-                            <Route path="/admin" element={<AdminDashboard />} />
-                            <Route path="/product/:id/edit" element={<EditProductPage />} />
-                        </>
-                    )}
-                    <Route path="/product/:id" element={<ProductPage />} />
-                    <Route path="/category/:category" element={<CategoryPage />} />
+          {user && (
+            <>
+              <Route path="/cart" element={<CartPage />} />
+              <Route path="/orders" element={<OrdersPage />} />
+            </>
+          )}
+          {user && user.isAdmin && (
+            <>
+              <Route path="/admin" element={<AdminDashboard />} />
+              <Route path="/product/:id/edit" element={<EditProductPage />} />
+            </>
+          )}
+          <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/category/:category" element={<CategoryPage />} />
 
-                    <Route path="/new-product" element={<NewProduct />} />
+          <Route path="/new-product" element={<NewProduct />} />
 
-                    <Route path="*" element={<Home />} />
-                </Routes>
-            </BrowserRouter>
-        </div>
-    );
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
