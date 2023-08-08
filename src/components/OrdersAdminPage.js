@@ -55,6 +55,7 @@ function OrdersAdminPage() {
     return <h1 className="text-center pt-4">No orders yet</h1>;
   }
 
+<<<<<<< HEAD
   function TableRow({
     _id,
     count,
@@ -65,15 +66,22 @@ function OrdersAdminPage() {
     phonenumber,
     address,
   }) {
+=======
+  function TableRow({ _id, count, owner, total, status, products, address }) {
+>>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
     return (
       <tr>
         <td>{_id}</td>
         <td>{owner?.name}</td>
         <td>{count}</td>
         <td>{total}</td>
+<<<<<<< HEAD
         <td>{phonenumber}</td>
         <td>{address}</td>
 
+=======
+        <td>{address}</td>
+>>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
         <td>
           {status === "processing" ? (
             <Button size="sm" onClick={() => markShipped(_id, owner?._id)}>
@@ -104,7 +112,10 @@ function OrdersAdminPage() {
             <th>Client Name</th>
             <th>Items</th>
             <th>Order Total</th>
+<<<<<<< HEAD
             <th>Phone Number</th>
+=======
+>>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
             <th>Address</th>
           </tr>
         </thead>

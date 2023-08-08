@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+=======
+>>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";

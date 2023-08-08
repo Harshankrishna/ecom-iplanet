@@ -17,13 +17,20 @@ import EditProductPage from "./pages/EditProductPage";
 import { useEffect } from "react";
 import { io } from "socket.io-client";
 import { addNotification } from "./features/userSlice";
+<<<<<<< HEAD
 import Profile from "./pages/Profile";
+=======
+>>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
 
 function App() {
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
   useEffect(() => {
+<<<<<<< HEAD
     const socket = io("ws://http://localhost:8080");
+=======
+    const socket = io("ws://https://frantic-train-lion.cyclic.app");
+>>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
     socket.off("notification").on("notification", (msgObj, user_id) => {
       if (user_id === user._id) {
         dispatch(addNotification(msgObj));
@@ -52,14 +59,20 @@ function App() {
 
           {user && (
             <>
+<<<<<<< HEAD
               <Route path="/profile" element={<Profile />} />
+=======
+>>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
               <Route path="/cart" element={<CartPage />} />
               <Route path="/orders" element={<OrdersPage />} />
             </>
           )}
           {user && user.isAdmin && (
             <>
+<<<<<<< HEAD
               <Route path="/profile" element={<Profile />} />
+=======
+>>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
               <Route path="/admin" element={<AdminDashboard />} />
               <Route path="/product/:id/edit" element={<EditProductPage />} />
             </>
