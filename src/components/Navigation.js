@@ -1,6 +1,5 @@
 import axios from "../axios";
 import React, { useRef, useState } from "react";
-<<<<<<< HEAD
 import {
   Navbar,
   Button,
@@ -9,9 +8,6 @@ import {
   Container,
   Image,
 } from "react-bootstrap";
-=======
-import { Navbar, Button, Nav, NavDropdown, Container } from "react-bootstrap";
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { logout, resetNotifications } from "../features/userSlice";
@@ -29,11 +25,7 @@ function Navigation() {
     dispatch(logout());
   }
   const unreadNotifications = user?.notifications?.reduce((acc, current) => {
-<<<<<<< HEAD
     if (current.status === "unread") return acc + 1;
-=======
-    if (current.status == "unread") return acc + 1;
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
     return acc;
   }, 0);
 
@@ -88,7 +80,6 @@ function Navigation() {
                     data-count={unreadNotifications || null}
                   ></i>
                 </Nav.Link>
-<<<<<<< HEAD
                 <Nav className="avatar avatar-nav">
                   <Image
                     className="rounded-circle img-fluid"
@@ -97,8 +88,6 @@ function Navigation() {
                   />
                 </Nav>
 
-=======
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
                 <NavDropdown title={`${user.email}`} id="basic-nav-dropdown">
                   {user.isAdmin && (
                     <>
@@ -112,12 +101,9 @@ function Navigation() {
                   )}
                   {!user.isAdmin && (
                     <>
-<<<<<<< HEAD
                       <LinkContainer to="/profile">
                         <NavDropdown.Item>My Profile</NavDropdown.Item>
                       </LinkContainer>
-=======
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
                       <LinkContainer to="/cart">
                         <NavDropdown.Item>Cart</NavDropdown.Item>
                       </LinkContainer>

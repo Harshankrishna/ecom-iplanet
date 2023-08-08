@@ -3,11 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const appApi = createApi({
   reducerPath: "appApi",
   baseQuery: fetchBaseQuery({
-<<<<<<< HEAD
-    baseUrl: "http://localhost:8080",
-=======
     baseUrl: "https://frantic-train-lion.cyclic.app",
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
   }),
   endpoints: (builder) => ({
     signup: builder.mutation({
@@ -18,17 +14,6 @@ export const appApi = createApi({
       }),
     }),
 
-<<<<<<< HEAD
-    updateProfile: builder.mutation({
-      query: (user) => ({
-        url: `/users/profile/edit/${user.id}`,
-        method: "PATCH",
-        body: user,
-      }),
-    }),
-
-=======
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
     login: builder.mutation({
       query: (user) => ({
         url: "/users/login",
@@ -107,10 +92,7 @@ export const appApi = createApi({
 
 export const {
   useSignupMutation,
-<<<<<<< HEAD
   useUpdateProfileMutation,
-=======
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
   useLoginMutation,
   useCreateProductMutation,
   useAddToCartMutation,

@@ -49,13 +49,9 @@ function OrdersPage() {
               <td>{order._id}</td>
               <td>
                 <Badge
-<<<<<<< HEAD
                   bg={`${
                     order.status === "processing" ? "warning" : "success"
                   }`}
-=======
-                  bg={`${order.status == "processing" ? "warning" : "success"}`}
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
                   text="white"
                 >
                   {order.status}

@@ -15,7 +15,6 @@ function CheckoutForm() {
     useCreateOrderMutation();
   const [country, setCountry] = useState("");
   const [address, setAddress] = useState("");
-<<<<<<< HEAD
   const [phonenumber, setPhoneNumber] = useState("");
   const [pincode, setPincode] = useState("");
   const [paying, setPaying] = useState(false);
@@ -76,49 +75,6 @@ function CheckoutForm() {
   return (
     <Col className="cart-payment-container">
       <Form onSubmit={handleSubmit}>
-=======
-  const [paying, setPaying] = useState(false);
-
-  async function handlePay(e) {
-    e.preventDefault();
-    if (!stripe || !elements || user.cart.count <= 0) return;
-    setPaying(true);
-    const { client_secret } = await fetch(
-      "https://frantic-train-lion.cyclic.app/create-payment",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer ",
-        },
-        body: JSON.stringify({ amount: user.cart.total }),
-      }
-    ).then((res) => res.json());
-    const { paymentIntent } = await stripe.confirmCardPayment(client_secret, {
-      payment_method: {
-        card: elements.getElement(CardElement),
-      },
-    });
-    setPaying(false);
-
-    if (paymentIntent) {
-      createOrder({ userId: user._id, cart: user.cart, address, country }).then(
-        (res) => {
-          if (!isLoading && !isError) {
-            setAlertMessage(`Payment ${paymentIntent.status}`);
-            setTimeout(() => {
-              //   navigate("/orders");
-            }, 3000);
-          }
-        }
-      );
-    }
-  }
-
-  return (
-    <Col className="cart-payment-container">
-      <Form onSubmit={handlePay}>
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
         <Row>
           {alertMessage && <Alert>{alertMessage}</Alert>}
           <Col md={6}>
@@ -145,7 +101,6 @@ function CheckoutForm() {
           </Col>
         </Row>
         <Row>
-<<<<<<< HEAD
           <Col md={6}>
             <Form.Group className="mb-3">
               <Form.Label>Phone Number</Form.Label>
@@ -159,9 +114,6 @@ function CheckoutForm() {
             </Form.Group>
           </Col>
           <Col md={6}>
-=======
-          <Col md={7}>
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
             <Form.Group className="mb-3">
               <Form.Label>Address</Form.Label>
               <Form.Control
@@ -173,13 +125,9 @@ function CheckoutForm() {
               />
             </Form.Group>
           </Col>
-<<<<<<< HEAD
         </Row>
         <Row>
           <Col md={6}>
-=======
-          <Col md={5}>
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
             <Form.Group className="mb-3">
               <Form.Label>Country</Form.Label>
               <Form.Control
@@ -191,7 +139,6 @@ function CheckoutForm() {
               />
             </Form.Group>
           </Col>
-<<<<<<< HEAD
           <Col md={6}>
             <Form.Group className="mb-3">
               <Form.Label>Pincode</Form.Label>
@@ -209,25 +156,15 @@ function CheckoutForm() {
         <CardElement id="card-element" /> */}
 
         {/* <Button
-=======
-        </Row>
-        <label htmlFor="card-element">Card</label>
-        <CardElement id="card-element" />
-        <Button
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
           className="mt-3"
           type="submit"
           disabled={user.cart.count <= 0 || paying || isSuccess}
         >
-<<<<<<< HEAD
           {paying ? "Processing..." : "Online Pay"}
         </Button> */}
 
         <Button className="mt-3" type="submit" disabled={isLoading}>
           Cash On Delivery
-=======
-          {paying ? "Processing..." : "Pay"}
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
         </Button>
       </Form>
     </Col>

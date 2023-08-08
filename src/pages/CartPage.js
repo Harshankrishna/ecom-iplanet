@@ -35,11 +35,7 @@ function CartPage() {
       <Row>
         <Col>
           <h1 className="pt-2 h3">Shopping cart</h1>
-<<<<<<< HEAD
           {cart.length === 0 ? (
-=======
-          {cart.length == 0 ? (
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
             <Alert variant="info">
               Shopping cart is empty. Add products to your cart
             </Alert>

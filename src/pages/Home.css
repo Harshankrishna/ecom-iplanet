@@ -17,14 +17,9 @@
 
 .card {
   border: none !important;
-<<<<<<< HEAD
   /* width: 15rem !important; */
 }
 
-=======
-  width: 15rem !important;
-}
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
 img.card-img-top.product-preview-img {
   border-radius: 10px;
 }
@@ -38,7 +33,6 @@ img.card-img-top.product-preview-img {
   display: block;
   margin: 0 auto;
 }
-<<<<<<< HEAD
 
 .mt-2 {
   justify-content: center;
@@ -48,5 +42,3 @@ img.card-img-top.product-preview-img {
   width: 70%;
   align-self: center;
 }
-=======
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f

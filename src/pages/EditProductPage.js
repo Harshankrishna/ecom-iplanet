@@ -144,11 +144,7 @@ function EditProductPage() {
                 {images.map((image) => (
                   <div className="image-preview">
                     <img src={image.url} alt="" />
-<<<<<<< HEAD
                     {imgToRemove !== image.public_id && (
-=======
-                    {imgToRemove != image.public_id && (
->>>>>>> 76f68bdae452755d6fcce717009cc882b006660f
                       <i
                         className="fa fa-times-circle"
                         onClick={() => handleRemoveImg(image)}
