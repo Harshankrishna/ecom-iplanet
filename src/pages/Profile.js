@@ -29,7 +29,7 @@ function Profile() {
           <MDBCol md="6">
             <MDBCardImage
               className="rounded-circle img-fluid"
-              src={user.pictures[0].url}
+              src={user.pictures[0].url ?? "./images/default_avatar.png"}
               style={{ height: "100%", objectFit: "cover" }}
               alt="profile_pic"
             />
