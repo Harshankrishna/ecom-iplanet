@@ -93,7 +93,7 @@ function Signup() {
               <div className="images-preview-container">
                 {images.map((image) => (
                   <div className="image-preview">
-                    <img src={image.url} alt="" />
+                    <img src={image.url ?? "./images/default_avatar.png"} alt="" />
                     {imgToRemove !== image.public_id && (
                       <i
                         className="fa fa-times-circle"
