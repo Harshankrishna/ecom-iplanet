@@ -59,7 +59,7 @@ function App() {
           )}
           {user && user.isAdmin && (
             <>
-              <Route path="/profile" element={<Profile />} />
+              // <Route path="/profile" element={<Profile />} />
               <Route path="/admin" element={<AdminDashboard />} />
               <Route path="/product/:id/edit" element={<EditProductPage />} />
             </>
