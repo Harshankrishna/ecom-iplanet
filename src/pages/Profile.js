@@ -11,17 +11,7 @@ import {
 } from "mdb-react-ui-kit";
 
 function Profile() {
-  //   const handleDragStart = (e) => e.preventDefault();
   const user = useSelector((state) => state.user);
-
-  //   const images = user.pictures.map((picture) => (
-  //     <img
-  //       className="product__carousel--image"
-  //       src={picture[0].url}
-  //       onDragStart={handleDragStart}
-  //       alt=""
-  //     />
-  //   ));
   return (
     <MDBContainer className="my-5">
       <MDBCard>
@@ -29,7 +19,7 @@ function Profile() {
           <MDBCol md="6">
             <MDBCardImage
               className="rounded-circle img-fluid"
-              src={user.pictures[0].url ?? "./images/default_avatar.png"}
+              src={user.pictures[0]}
               style={{ height: "100%", objectFit: "cover" }}
               alt="profile_pic"
             />
