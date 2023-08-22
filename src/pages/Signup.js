@@ -9,7 +9,9 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState(
+    "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg"
+  );
   const [imgToRemove, setImgToRemove] = useState(null);
   const [signup, { error, isLoading, isError }] = useSignupMutation();
 
@@ -25,10 +27,10 @@ function Signup() {
       },
       (error, result) => {
         if (!error && result.event === "success") {
-          setImages((prev) => [
-            ...prev,
-            { url: result.info.url, public_id: result.info.public_id },
-          ]);
+          setImages(
+            (prev) =>
+              result.info.url
+          );
         }
       }
     );
@@ -40,8 +42,9 @@ function Signup() {
       .delete(`/images/${imgObj.public_id}/`)
       .then((res) => {
         setImgToRemove(null);
-        setImages((prev) =>
-          prev.filter((img) => img.public_id !== imgObj.public_id)
+        setImages(
+          (prev) =>
+            "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg"
         );
       })
       .catch((e) => console.log(e));
@@ -91,17 +94,19 @@ function Signup() {
                 Upload Images
               </Button>
               <div className="images-preview-container">
-                {images.map((image) => (
-                  <div className="image-preview">
-                    <img src={image.url} alt="" />
-                    {imgToRemove !== image.public_id && (
-                      <i
-                        className="fa fa-times-circle"
-                        onClick={() => handleRemoveImg(image)}
-                      ></i>
-                    )}
-                  </div>
-                ))}
+                <div className="image-preview">
+                  <img
+                    src={
+                      images ??
+                      "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg"
+                    }
+                    alt="avatar"
+                  />
+                  <i
+                    className="fa fa-times-circle"
+                    onClick={() => handleRemoveImg(images)}
+                  ></i>
+                </div>    
               </div>
             </Form.Group>
 
