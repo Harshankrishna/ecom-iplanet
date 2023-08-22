@@ -84,7 +84,7 @@ function Navigation() {
                   <Image
                     className="rounded-circle img-fluid"
                     width="40px"
-                    src={user.pictures[0].url ?? "./images/default_avatar.png"}
+                    src={user.pictures[0]}
                   />
                 </Nav>
 
