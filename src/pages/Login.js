@@ -38,30 +38,29 @@ function Login() {
                             Don't have an account? <Link to="/signup">Create account</Link>{" "}
                         </p>
                     </Form>
-                            
                             <h2>Credentials</h2>
                             <table>
                             <tr>
                             <th>Admin Credentials</th>
                             </tr>
-                           <tr>
+                            <tr>
                             <td>Email</td>
                             <td>harshan@gmail.com</td>
-                              </tr>
-                              <tr>
+                            </tr>
+                            <tr>
                             <td>Password</td>
                             <td>123456</td>
-                              </tr>
+                            </tr>
                             <th>User Credentials</th>
                             </tr>
                             <tr>
-    <td>Email</td>
-    <td>user@gmail.com</td>
-  </tr>
-  <tr>
-    <td>Password</td>
-    <td>123456</td>
-  </tr>
+                            <td>Email</td>
+                            <td>user@gmail.com</td>
+                            </tr>
+                            <tr>
+                            <td>Password</td>
+                            <td>123456</td>
+                            </tr>
                             </table>
                             
                 </Col>
