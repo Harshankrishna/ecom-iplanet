@@ -44,17 +44,24 @@ function Login() {
                             <tr>
                             <th>Admin Credentials</th>
                             </tr>
-                            <tr>
-                            <td>Email : harshan@gmail.com</td>
-                            <td>Password : 123456</td>
-                            </tr>
-                            <tr>
+                           <tr>
+                            <td>Email</td>
+                            <td>harshan@gmail.com</td>
+                              </tr>
+                              <tr>
+                            <td>Password</td>
+                            <td>123456</td>
+                              </tr>
                             <th>User Credentials</th>
                             </tr>
                             <tr>
-                            <td>Email : user@gmail.com</td>
-                            <td>Password : 123456</td>
-                            </tr>
+    <td>Email</td>
+    <td>user@gmail.com</td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td>123456</td>
+  </tr>
                             </table>
                             
                 </Col>
