@@ -38,13 +38,24 @@ function Login() {
                             Don't have an account? <Link to="/signup">Create account</Link>{" "}
                         </p>
                     </Form>
+                            
                             <h2>Credentials</h2>
-                            <h3>Admin Credentials</h3>
-                            <p>Email : harshan@gmail.com</p>
-                            <p>Password : 123456</p>
-                            <h3>User Credentials</h3>
-                            <p>Email : user@gmail.com</p>
-                            <p>Password : 123456</p>
+                            <table>
+                            <tr>
+                            <th>Admin Credentials</th>
+                            </tr>
+                            <tr>
+                            <td>Email : harshan@gmail.com</td>
+                            <td>Password : 123456</td>
+                            </tr>
+                            <tr>
+                            <th>User Credentials</th>
+                            </tr>
+                            <tr>
+                            <td>Email : user@gmail.com</td>
+                            <td>Password : 123456</td>
+                            </tr>
+                            </table>
                             
                 </Col>
                 <Col md={6} className="login__image--container"></Col>
