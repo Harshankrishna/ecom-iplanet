@@ -49,13 +49,6 @@ function Login() {
                 </Col>
                 <Col md={6} className="login__image--container"></Col>
             </Row>
-                             <h2>Credentials</h2>
-                            <h3>Admin Credentials</h3>
-                            <p>Email : harshan@gmail.com</p>
-                            <p>Password : 123456</p>
-                            <h3>User Credentials</h3>
-                            <p>Email : user@gmail.com</p>
-                            <p>Password : 123456</p>
         </Container>
     );
 }
