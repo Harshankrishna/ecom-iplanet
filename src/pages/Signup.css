@@ -21,6 +21,7 @@
 
 table, td{
   border: 1px solid black;
+  width: 100%;
 }
 
 @media screen and (max-width: 756px) {
