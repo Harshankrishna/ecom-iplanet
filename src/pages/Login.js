@@ -51,6 +51,7 @@ function Login() {
                             <td>Password</td>
                             <td>123456</td>
                             </tr>
+                            <tr>
                             <th>User Credentials</th>
                             </tr>
                             <tr>
